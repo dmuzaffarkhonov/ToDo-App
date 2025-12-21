@@ -265,7 +265,7 @@ addTodoBtn.addEventListener("click", () => {
   modal.classList.add("openModal");
 });
 
-newNoteBtn.addEventListener("click", addTodoBtn.click);
+newNoteBtn.addEventListener("click", () => addTodoBtn.click());
 overlay.addEventListener("click", hideModal);
 cancelModalBtn.addEventListener("click", hideModal);
 
