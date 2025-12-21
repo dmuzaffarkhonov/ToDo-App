@@ -1,0 +1,32 @@
+@mixin media($d) {
+  @media (max-width: $d) {
+    @content;
+  }
+}
+
+@mixin pr-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--pr-color);
+  border: 2px solid var(--pr-color);
+
+  cursor: pointer;
+  transition: all 0.2s ease;
+
+  position: fixed;
+
+  font: 400 16px/1 var(--Raleway);
+  color: var(--white);
+  text-transform: uppercase;
+
+  &:hover {
+    box-shadow: 0 0 4px 0 var(--pr-color);
+    background-color: #5850dd;
+  }
+
+  &:active {
+    opacity: 0.8;
+  }
+}
