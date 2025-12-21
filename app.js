@@ -303,6 +303,12 @@ searchInput.addEventListener("input", (e) => {
   todoLoop();
 });
 
+searchInput.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    e.preventDefault();
+  }
+});
+
 // Filter buttons
 document
   .getElementById("all_btn")

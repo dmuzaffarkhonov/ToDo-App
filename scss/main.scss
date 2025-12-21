@@ -282,7 +282,7 @@ body {
 
   &__inputSearch {
     width: 100%;
-    padding: 8px 16px;
+    padding: 8px 53px 8px 16px;
 
     border-radius: 5px;
     border: 1px solid var(--input-clr);
@@ -348,6 +348,7 @@ body {
       position: absolute;
       top: 38px;
       left: 0;
+      z-index: 1;
 
       padding: 5px 0;
       display: flex;
