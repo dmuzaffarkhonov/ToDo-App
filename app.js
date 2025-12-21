@@ -18,6 +18,7 @@ const cancelModalBtn = document.getElementById("cancelModalBtn");
 const todoForm = document.getElementById("todoForm");
 const todoInput = document.getElementById("todoInput");
 const todoList = document.getElementById("todoList");
+const emptyState = document.getElementById("emptyState");
 
 // Edit
 const editBtn = document.getElementById("editBtn");
@@ -85,6 +86,8 @@ function setFilter(filter) {
 function todoLoop() {
   todoList.innerHTML = "";
 
+  let hasItems = false;
+
   todo.forEach((item, index) => {
     if (searchQuery && !item.value.toLowerCase().includes(searchQuery)) return;
 
@@ -94,6 +97,8 @@ function todoLoop() {
     ) {
       return;
     }
+
+    hasItems = true;
 
     todoList.innerHTML += `
       <li>
@@ -148,6 +153,8 @@ function todoLoop() {
       </li>
     `;
   });
+
+  emptyState.style.display = hasItems ? "none" : "flex";
 
   todoList.querySelectorAll("li").forEach((li) => {
     const input = li.querySelector(".editInput");

@@ -252,7 +252,7 @@ body {
     }
   }
 
-  /* ---------------- INPUTS --------------- */
+  /* =============== INPUTS =============== */
   .input-wr {
     position: relative;
     width: 100%;
@@ -307,7 +307,7 @@ body {
     }
   }
 
-  /* ---------------- FILTER --------------- */
+  /* =============== FILTER =============== */
   .filter {
     width: 100%;
     max-width: 123px;
@@ -394,7 +394,7 @@ body {
     }
   }
 
-  /* ---------------- THEME MODE --------------- */
+  /* =============== THEME MODE =============== */
   &__theme_mode {
     padding: 8px;
     border-radius: 5px;
@@ -428,7 +428,7 @@ body {
     }
   }
 
-  /* ---------------- ADD NOTE BTN --------------- */
+  /* =============== ADD NOTE BTN =============== */
   .addTodoMediaBtn {
     @include pr-btn;
     position: static;
@@ -457,7 +457,7 @@ body {
     }
   }
 
-  /* ---------------- LIST --------------- */
+  /* =============== LIST =============== */
   &__list {
     width: 100%;
     max-width: 550px;
@@ -623,7 +623,32 @@ body {
     }
   }
 
-  /* ---------------- TO DO BUTTONS --------------- */
+  .empty {
+    width: 100%;
+    max-width: 221px;
+
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    &__img {
+      width: 221px;
+      height: 174px;
+      object-fit: cover;
+      display: flex;
+      margin-bottom: 20px;
+    }
+
+    &__text {
+      font-family: var(--Kanit);
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1;
+      color: var(--title-clr);
+    }
+  }
+
+  /* =============== TO DO BUTTONS =============== */
   &__addTodoBtn {
     @include pr-btn;
     padding: 11px;

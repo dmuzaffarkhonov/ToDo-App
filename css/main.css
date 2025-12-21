@@ -177,12 +177,12 @@ body {
 /* ---------------- TO DO --------------- */
 .todo {
   padding: 40px 0 32px;
-  /* ---------------- INPUTS --------------- */
-  /* ---------------- FILTER --------------- */
-  /* ---------------- THEME MODE --------------- */
-  /* ---------------- ADD NOTE BTN --------------- */
-  /* ---------------- LIST --------------- */
-  /* ---------------- TO DO BUTTONS --------------- */
+  /* =============== INPUTS =============== */
+  /* =============== FILTER =============== */
+  /* =============== THEME MODE =============== */
+  /* =============== ADD NOTE BTN =============== */
+  /* =============== LIST =============== */
+  /* =============== TO DO BUTTONS =============== */
 }
 .todo .container {
   display: flex;
@@ -553,6 +553,28 @@ body {
 .todo__list .actions .saveBtn,
 .todo__list .actions .cancelBtn {
   display: none;
+}
+.todo .empty {
+  width: 100%;
+  max-width: 221px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+}
+.todo .empty__img {
+  width: 221px;
+  height: 174px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: flex;
+  margin-bottom: 20px;
+}
+.todo .empty__text {
+  font-family: var(--Kanit);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  color: var(--title-clr);
 }
 .todo__addTodoBtn {
   display: flex;
