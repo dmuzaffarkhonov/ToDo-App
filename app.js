@@ -116,10 +116,10 @@ function todoLoop() {
             </svg>
           </span>
 
-          <p class="todoCheck__text">${item.value}</p>
+          <p class="todoCheck__text"></p>
         </label>
 
-        <input type="text" class="editInput" value="${item.value}" />
+        <input type="text" class="editInput" />
 
         <div class="actions">
           <button class="editBtn" onclick="todoEdit(${index}, this)">
@@ -152,6 +152,11 @@ function todoLoop() {
         </div>
       </li>
     `;
+
+    const li = todoList.lastElementChild;
+
+    li.querySelector(".todoCheck__text").textContent = item.value;
+    li.querySelector(".editInput").value = item.value;
   });
 
   emptyState.style.display = hasItems ? "none" : "flex";
