@@ -14,7 +14,12 @@
     <div class="modal" id="modal">
       <h2 class="modal__title">New Note</h2>
       <form class="modal__form" id="todoForm">
-        <input type="text" placeholder="Input your note..." id="todoInput" />
+        <input
+          type="text"
+          placeholder="Input your note..."
+          id="todoInput"
+          aria-label="Task name"
+        />
         <div class="modal__btn-wr">
           <button class="cancel" id="cancelModalBtn" type="button">
             Cancel
@@ -39,8 +44,14 @@
               class="todo__inputSearch"
               placeholder="Search note..."
               id="searchInput"
+              aria-label="Search tasks"
             />
-            <button class="search" type="button" id="searchBtn">
+            <button
+              class="search"
+              type="button"
+              id="searchBtn"
+              aria-label="Focus search"
+            >
               <svg
                 width="21"
                 height="21"
@@ -58,31 +69,54 @@
 
           <!-- FILTER -->
           <div class="filter">
-            <button class="filter__button" type="button">
+            <button
+              class="filter__button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="filterMenu"
+            >
               <span class="filter__button__text">incomplete</span>
             </button>
-            <ul class="filter__menu">
+            <ul class="filter__menu" id="filterMenu" aria-hidden="true">
               <li>
-                <button id="all_btn" type="button">all</button>
+                <button id="all_btn" type="button" data-filter="all">all</button>
               </li>
               <li>
-                <button id="Complete_btn" type="button">Complete</button>
+                <button
+                  id="Complete_btn"
+                  type="button"
+                  data-filter="complete"
+                >
+                  Complete
+                </button>
               </li>
               <li>
-                <button id="Incomplete_btn" type="button">Incomplete</button>
+                <button
+                  id="Incomplete_btn"
+                  type="button"
+                  data-filter="incomplete"
+                >
+                  Incomplete
+                </button>
               </li>
             </ul>
           </div>
 
           <!-- THEME MODE -->
-          <button class="todo__theme_mode" id="themeModeBtn" type="button">
-            <img src="./imgs/svg/dark.svg" alt="dark_btn" id="dark" />
-            <img src="./imgs/svg/light.svg" alt="light_btn" id="light" />
+          <button
+            class="todo__theme_mode"
+            id="themeModeBtn"
+            type="button"
+            aria-label="Switch to dark theme"
+            aria-pressed="false"
+          >
+            <img src="./imgs/svg/dark.svg" alt="" id="dark" />
+            <img src="./imgs/svg/light.svg" alt="" id="light" />
           </button>
         </form>
 
         <!-- NEW NOTE BTN -->
-        <button class="addTodoMediaBtn" id="newNoteBtn">
+        <button class="addTodoMediaBtn" id="newNoteBtn" type="button">
           NEW NOTE
           <img src="./imgs/svg/plus.svg" alt="" />
         </button>
@@ -97,12 +131,23 @@
         </div>
 
         <!-- ADD TO DO -->
-        <button class="todo__addTodoBtn" id="addTodoBtn">
-          <img src="./imgs/svg/plus.svg" alt="plus" />
+        <button
+          class="todo__addTodoBtn"
+          id="addTodoBtn"
+          type="button"
+          aria-label="Add task"
+        >
+          <img src="./imgs/svg/plus.svg" alt="" />
         </button>
 
         <!-- REMOVE TO DO -->
-        <button class="todo__undoBtn" id="undoBtn">
+        <button
+          class="todo__undoBtn"
+          id="undoBtn"
+          type="button"
+          aria-label="Undo task deletion"
+          disabled
+        >
           <span class="undoCircle">
             <svg width="28" height="28">
               <circle cx="14" cy="14" r="12" />
