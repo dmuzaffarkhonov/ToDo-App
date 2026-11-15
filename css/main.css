@@ -115,9 +115,6 @@ body {
 .modal__form input:focus {
   box-shadow: 0 0 0 2px var(--input-shdw);
 }
-.modal__form input::-moz-placeholder {
-  color: var(--place-holder-clr);
-}
 .modal__form input::placeholder {
   color: var(--place-holder-clr);
 }
@@ -177,12 +174,6 @@ body {
 /* ---------------- TO DO --------------- */
 .todo {
   padding: 40px 0 32px;
-  /* =============== INPUTS =============== */
-  /* =============== FILTER =============== */
-  /* =============== THEME MODE =============== */
-  /* =============== ADD NOTE BTN =============== */
-  /* =============== LIST =============== */
-  /* =============== TO DO BUTTONS =============== */
 }
 .todo .container {
   display: flex;
@@ -209,6 +200,9 @@ body {
     gap: 16px;
     margin-bottom: 16px;
   }
+}
+.todo {
+  /* =============== INPUTS =============== */
 }
 .todo .input-wr {
   position: relative;
@@ -252,11 +246,11 @@ body {
 .todo__inputSearch:focus {
   box-shadow: 0 0 0 2px var(--input-shdw);
 }
-.todo__inputSearch::-moz-placeholder {
-  color: var(--place-holder-clr);
-}
 .todo__inputSearch::placeholder {
   color: var(--place-holder-clr);
+}
+.todo {
+  /* =============== FILTER =============== */
 }
 .todo .filter {
   width: 100%;
@@ -286,13 +280,6 @@ body {
   font: 400 16px/1 var(--Raleway);
   color: var(--white);
   text-transform: uppercase;
-  position: static;
-  width: 100%;
-  max-width: 123px;
-  padding: 8px;
-  border-radius: 5px;
-  font: 500 18px/1 var(--Kanit);
-  justify-content: space-between;
 }
 .todo .filter__button:hover {
   box-shadow: 0 0 4px 0 var(--pr-color);
@@ -300,6 +287,15 @@ body {
 }
 .todo .filter__button:active {
   opacity: 0.8;
+}
+.todo .filter__button {
+  position: static;
+  width: 100%;
+  max-width: 123px;
+  padding: 8px;
+  border-radius: 5px;
+  font: 500 18px/1 var(--Kanit);
+  justify-content: space-between;
 }
 @media (max-width: 770px) {
   .todo .filter__button {
@@ -348,6 +344,9 @@ body {
 .todo .filter__menu li button:active {
   opacity: 0.8;
 }
+.todo {
+  /* =============== THEME MODE =============== */
+}
 .todo__theme_mode {
   padding: 8px;
   border-radius: 5px;
@@ -375,6 +374,9 @@ body {
 .todo__theme_mode #light {
   display: none;
 }
+.todo {
+  /* =============== ADD NOTE BTN =============== */
+}
 .todo .addTodoMediaBtn {
   display: flex;
   align-items: center;
@@ -387,6 +389,15 @@ body {
   font: 400 16px/1 var(--Raleway);
   color: var(--white);
   text-transform: uppercase;
+}
+.todo .addTodoMediaBtn:hover {
+  box-shadow: 0 0 4px 0 var(--pr-color);
+  background-color: #5850dd;
+}
+.todo .addTodoMediaBtn:active {
+  opacity: 0.8;
+}
+.todo .addTodoMediaBtn {
   position: static;
   display: none;
   width: 100%;
@@ -397,18 +408,10 @@ body {
   font: 500 18px/1 var(--Kanit);
   margin-bottom: 30px;
 }
-.todo .addTodoMediaBtn:hover {
-  box-shadow: 0 0 4px 0 var(--pr-color);
-  background-color: #5850dd;
-}
-.todo .addTodoMediaBtn:active {
-  opacity: 0.8;
-}
 .todo .addTodoMediaBtn img {
   width: 16px;
   height: 16px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: flex;
 }
 @media (max-width: 770px) {
@@ -416,15 +419,14 @@ body {
     display: flex;
   }
 }
+.todo {
+  /* =============== LIST =============== */
+}
 .todo__list {
   width: 100%;
   max-width: 550px;
   display: flex;
   flex-direction: column;
-  /* ---------- Editing state ---------- */
-  /* ---------- Checkbox block ---------- */
-  /* ---------- Edit input ---------- */
-  /* ---------- Actions block ---------- */
 }
 .todo__list li {
   display: flex;
@@ -439,6 +441,9 @@ body {
 .todo__list li:hover .actions {
   opacity: 1;
 }
+.todo__list {
+  /* ---------- Editing state ---------- */
+}
 .todo__list .editing .actions .editBtn,
 .todo__list .editing .actions .removeBtn {
   display: none;
@@ -446,6 +451,9 @@ body {
 .todo__list .editing .actions .saveBtn,
 .todo__list .editing .actions .cancelBtn {
   display: flex;
+}
+.todo__list {
+  /* ---------- Checkbox block ---------- */
 }
 .todo__list .todoCheck {
   display: flex;
@@ -460,15 +468,11 @@ body {
 .todo__list .todoCheck__text {
   font: 500 20px/1 var(--Kanit);
   color: var(--title-clr);
-  transition: color 0.2s ease, -webkit-text-decoration 0.2s ease;
   transition: color 0.2s ease, text-decoration 0.2s ease;
-  transition: color 0.2s ease, text-decoration 0.2s ease, -webkit-text-decoration 0.2s ease;
 }
 .todo__list .todoCheck__input {
   position: absolute;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
+  appearance: none;
 }
 .todo__list .todoCheck__box {
   width: 26px;
@@ -510,6 +514,9 @@ body {
   color: #808080;
   text-decoration: line-through;
 }
+.todo__list {
+  /* ---------- Edit input ---------- */
+}
 .todo__list .editInput {
   width: 100%;
   height: 20px;
@@ -519,6 +526,9 @@ body {
   outline: none;
   font: 500 20px/1 var(--Kanit);
   color: var(--title-clr);
+}
+.todo__list {
+  /* ---------- Actions block ---------- */
 }
 .todo__list .actions {
   display: flex;
@@ -565,8 +575,7 @@ body {
 .todo .empty__img {
   width: 221px;
   height: 174px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   display: flex;
   margin-bottom: 20px;
 }
@@ -576,6 +585,9 @@ body {
   font-size: 20px;
   line-height: 1;
   color: var(--title-clr);
+}
+.todo {
+  /* =============== TO DO BUTTONS =============== */
 }
 .todo__addTodoBtn {
   display: flex;
@@ -589,10 +601,6 @@ body {
   font: 400 16px/1 var(--Raleway);
   color: var(--white);
   text-transform: uppercase;
-  padding: 11px;
-  border-radius: 50%;
-  bottom: 32px;
-  right: calc(50vw - 367px);
 }
 .todo__addTodoBtn:hover {
   box-shadow: 0 0 4px 0 var(--pr-color);
@@ -600,6 +608,12 @@ body {
 }
 .todo__addTodoBtn:active {
   opacity: 0.8;
+}
+.todo__addTodoBtn {
+  padding: 11px;
+  border-radius: 50%;
+  bottom: 32px;
+  right: calc(50vw - 367px);
 }
 .todo__addTodoBtn img {
   width: 24px;
@@ -622,6 +636,15 @@ body {
   font: 400 16px/1 var(--Raleway);
   color: var(--white);
   text-transform: uppercase;
+}
+.todo__undoBtn:hover {
+  box-shadow: 0 0 4px 0 var(--pr-color);
+  background-color: #5850dd;
+}
+.todo__undoBtn:active {
+  opacity: 0.8;
+}
+.todo__undoBtn {
   width: 123px;
   height: 38px;
   padding: 3px 6px;
@@ -631,13 +654,6 @@ body {
   transform: translateY(10px);
   opacity: 0;
   display: none;
-}
-.todo__undoBtn:hover {
-  box-shadow: 0 0 4px 0 var(--pr-color);
-  background-color: #5850dd;
-}
-.todo__undoBtn:active {
-  opacity: 0.8;
 }
 @media (max-width: 770px) {
   .todo__undoBtn {
